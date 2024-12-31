@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Supplier extends Model
+{
+    protected $guarded = ['id', 'created_at','updated_at'];
+    public function barnag_keluar(){
+        return $this->hasMany(BarangKeluar::class);
+    }
+}
